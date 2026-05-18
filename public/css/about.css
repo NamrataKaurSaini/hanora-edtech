@@ -1,0 +1,420 @@
+/* about.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #2f3138;
+}
+
+section{
+    padding: 90px 8%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-title{
+    text-align: center;
+    max-width: 760px;
+    margin: auto;
+}
+
+.section-title span{
+    color: #ff6b00;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section-title h2{
+    font-size: 52px;
+    margin: 18px 0;
+    line-height: 1.2;
+}
+
+.section-title p{
+    color: #6d6d6d;
+    line-height: 1.8;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-btn{
+    padding: 16px 34px;
+    background: #ff6b00;
+    color: white;
+    border-radius: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.primary-btn:hover{
+    background: #ff8533;
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero{
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.9),
+            rgba(255,255,255,0.9)
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(255,107,0,0.08),
+            transparent 30%
+        );
+}
+
+.about-hero-content{
+    max-width: 850px;
+}
+
+.about-hero-content span{
+    color: #ff6b00;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-hero-content h1{
+    font-size: 72px;
+    line-height: 1.1;
+    margin: 24px 0;
+}
+
+.about-hero-content p{
+    color: #6d6d6d;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   INTRO
+========================================= */
+
+.about-intro{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: white;
+}
+
+.intro-left,
+.intro-right{
+    flex: 1;
+}
+
+.intro-image-box{
+    height: 550px;
+    border-radius: 40px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,107,0,0.12),
+        rgba(255,107,0,0.04)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-image-box i{
+    font-size: 120px;
+    color: #ff6b00;
+}
+
+.intro-right span{
+    color: #ff6b00;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.intro-right h2{
+    font-size: 54px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.intro-right p{
+    color: #6d6d6d;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.intro-features{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.intro-feature{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.intro-feature i{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,107,0,0.1);
+    color: #ff6b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   VISION
+========================================= */
+
+.vision-mission{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.vision-card{
+    background: white;
+    padding: 50px;
+    border-radius: 32px;
+    border: 1px solid #ececec;
+    transition: 0.4s ease;
+}
+
+.vision-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(255,107,0,0.08);
+}
+
+.vision-icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    background: rgba(255,107,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.vision-icon i{
+    font-size: 42px;
+    color: #ff6b00;
+}
+
+.vision-card h3{
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.vision-card p{
+    color: #6d6d6d;
+    line-height: 1.9;
+}
+
+/* =========================================
+   WHY
+========================================= */
+
+.about-why{
+    background: white;
+}
+
+.about-why-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.why-card{
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid #ececec;
+    transition: 0.4s ease;
+}
+
+.why-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(255,107,0,0.08);
+}
+
+.why-card i{
+    font-size: 48px;
+    color: #ff6b00;
+    margin-bottom: 24px;
+}
+
+.why-card h4{
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.why-card p{
+    color: #6d6d6d;
+    line-height: 1.8;
+}
+
+/* =========================================
+   PROGRAMS
+========================================= */
+
+.programs-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.program-card{
+    background: white;
+    padding: 42px;
+    border-radius: 30px;
+    border: 1px solid #ececec;
+    transition: 0.4s ease;
+}
+
+.program-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(255,107,0,0.08);
+}
+
+.program-icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    background: rgba(255,107,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.program-icon i{
+    font-size: 40px;
+    color: #ff6b00;
+}
+
+.program-card h3{
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+
+.program-card p{
+    color: #6d6d6d;
+    line-height: 1.8;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.about-cta{
+    padding-top: 20px;
+}
+
+.cta-content{
+    background: linear-gradient(
+        to right,
+        #26282e,
+        #343741
+    );
+    border-radius: 40px;
+    padding: 100px;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2{
+    font-size: 58px;
+    margin-bottom: 22px;
+}
+
+.cta-content p{
+    max-width: 700px;
+    margin: auto auto 40px;
+    line-height: 1.9;
+    font-size: 18px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+    .about-intro{
+        flex-direction: column;
+    }
+
+    .about-why-grid,
+    .programs-grid,
+    .vision-mission{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+        padding: 80px 6%;
+    }
+
+    .about-hero-content h1{
+        font-size: 48px;
+    }
+
+    .intro-right h2,
+    .section-title h2,
+    .cta-content h2{
+        font-size: 38px;
+    }
+
+    .intro-image-box{
+        height: 400px;
+    }
+
+    .cta-content{
+        padding: 60px 30px;
+    }
+
+}

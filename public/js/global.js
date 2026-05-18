@@ -1,18 +1,67 @@
-async function loadComponents() {
+/* =========================================
+   GLOBAL COMPONENT LOADER
+========================================= */
 
-    const navbar = document.getElementById("navbar");
-    const footer = document.getElementById("footer");
+const navbar =
+document.getElementById("navbar");
 
-    if(navbar){
-        const navResponse = await fetch("components/navbar.html");
-        navbar.innerHTML = await navResponse.text();
-    }
+const footer =
+document.getElementById("footer");
 
-    if(footer){
-        const footerResponse = await fetch("components/footer.html");
-        footer.innerHTML = await footerResponse.text();
-    }
+/* =========================================
+   PAGE CHECK
+========================================= */
+
+const currentPath =
+window.location.pathname;
+
+const isCoursePage =
+currentPath.includes("/courses/");
+
+/* =========================================
+   PATHS
+========================================= */
+
+const navbarPath = isCoursePage
+? "../components/navbar-course.html?v=2"
+: "components/navbar.html?v=2";
+
+const footerPath = isCoursePage
+? "../components/footer-course.html?v=2"
+: "components/footer.html?v=2";
+
+/* =========================================
+   LOAD NAVBAR
+========================================= */
+
+if(navbar){
+
+    fetch(navbarPath)
+
+    .then(response => response.text())
+
+    .then(data => {
+
+        navbar.innerHTML = data;
+
+    });
 
 }
 
-loadComponents();
+/* =========================================
+   LOAD FOOTER
+========================================= */
+
+if(footer){
+
+    fetch(footerPath)
+
+    .then(response => response.text())
+
+    .then(data => {
+
+        footer.innerHTML = data;
+
+    });
+
+}
