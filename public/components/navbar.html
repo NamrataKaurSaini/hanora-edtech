@@ -2,42 +2,63 @@
 
     <div class="nav-container">
 
-        <!-- LEFT : LOGO -->
-
-        <a href="index.html" class="logo">
-
-            <img src="assets/hanora-logo.png" alt="Logo">
-
+        <!-- LOGO -->
+        <a href="{{ROOT}}index.html" class="logo">
+            <img src="{{ROOT}}assets/logo.png" alt="Logo">
         </a>
 
         <!-- RIGHT SIDE -->
-
         <div class="nav-right">
 
             <!-- LINKS -->
-
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="{{ROOT}}index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="{{ROOT}}about.html">About</a>
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="{{ROOT}}courses.html" class="dropdown-link">
+                        Courses
+                        <i class="ri-arrow-down-s-line"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="{{ROOT}}courses/bba.html">
+                                BBA
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ROOT}}courses/bcom.html">
+                                B.Com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ROOT}}courses/mba.html">
+                                MBA
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </li>
 
                 <li>
-                    <a href="courses.html">Courses</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="{{ROOT}}contact.html">Contact</a>
                 </li>
 
             </ul>
 
             <!-- BUTTONS -->
-
             <div class="nav-actions">
 
                 <button class="popup-nav-btn" id="openPopupBtn">
@@ -48,7 +69,7 @@
 
                 </button>
 
-                <a href="contact.html" class="nav-btn">
+                <a href="{{ROOT}}contact.html" class="nav-btn">
 
                     Apply Now
 

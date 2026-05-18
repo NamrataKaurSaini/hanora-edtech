@@ -9,6 +9,8 @@
     <title>
         Contact Us | Hanora Edtech
     </title>
+    <!-- FAVICON-->
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
     <!-- GOOGLE FONTS -->
 
@@ -18,22 +20,21 @@
 
     <!-- REMIX ICON -->
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS -->
 
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-
+    <div id="popup"></div>
     <div id="navbar"></div>
 
     <!-- HERO -->
@@ -142,24 +143,15 @@
 
                 <div class="form-row">
 
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        required>
+                    <input type="text" placeholder="Full Name" required>
 
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        required>
+                    <input type="email" placeholder="Email Address" required>
 
                 </div>
 
                 <div class="form-row">
 
-                    <input
-                        type="text"
-                        placeholder="Phone Number"
-                        required>
+                    <input type="text" placeholder="Phone Number" required>
 
                     <select required>
 
@@ -183,9 +175,7 @@
 
                 </div>
 
-                <textarea
-                    rows="7"
-                    placeholder="Write Your Message">
+                <textarea rows="7" placeholder="Write Your Message">
                 </textarea>
 
                 <button type="submit" class="primary-btn">

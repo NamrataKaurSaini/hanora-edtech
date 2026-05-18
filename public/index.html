@@ -12,6 +12,9 @@
         Hanora Edtech | Learn • Grow • Succeed
     </title>
 
+    <!-- FAVICON-->
+     <link rel="icon" type="image/png" href="assets/logo.png">
+
     <!-- GOOGLE FONTS -->
 
     <link
@@ -574,60 +577,6 @@
     <div id="footer"></div>
 
     <!-- JS -->
-
-    <!-- pop up js-->
-
-    <script>
-
-        /* =========================================
-           ELEMENTS
-        ========================================= */
-
-        const popupOverlay =
-            document.getElementById("popupOverlay");
-
-        const popupClose =
-            document.getElementById("popupClose");
-
-        /* =========================================
-           OPEN POPUP FROM NAVBAR
-        ========================================= */
-
-        document.addEventListener("click", (e) => {
-
-            if (e.target.closest("#openPopupBtn")) {
-
-                popupOverlay.classList.add("active");
-
-            }
-
-        });
-
-        /* =========================================
-           CLOSE POPUP
-        ========================================= */
-
-        popupClose.addEventListener("click", () => {
-
-            popupOverlay.classList.remove("active");
-
-        });
-
-        /* =========================================
-           CLOSE ON OUTSIDE CLICK
-        ========================================= */
-
-        popupOverlay.addEventListener("click", (e) => {
-
-            if (e.target === popupOverlay) {
-
-                popupOverlay.classList.remove("active");
-
-            }
-
-        });
-
-    </script>
 
     <script src="js/global.js"></script>
 

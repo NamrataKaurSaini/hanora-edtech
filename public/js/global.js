@@ -1,67 +1,76 @@
 /* =========================================
-   GLOBAL COMPONENT LOADER
+   COMPONENT TARGETS
 ========================================= */
 
-const navbar =
-document.getElementById("navbar");
-
-const footer =
-document.getElementById("footer");
+const navbar = document.getElementById("navbar");
+const footer = document.getElementById("footer");
+const popup = document.getElementById("popup");
 
 /* =========================================
    PAGE CHECK
 ========================================= */
 
-const currentPath =
-window.location.pathname;
-
 const isCoursePage =
-currentPath.includes("/courses/");
+    window.location.pathname.includes("/courses/");
 
 /* =========================================
-   PATHS
+   ROOT PATH
 ========================================= */
 
-const navbarPath = isCoursePage
-? "../components/navbar-course.html?v=2"
-: "components/navbar.html?v=2";
-
-const footerPath = isCoursePage
-? "../components/footer-course.html?v=2"
-: "components/footer.html?v=2";
+const ROOT = isCoursePage ? "../" : "";
 
 /* =========================================
-   LOAD NAVBAR
+   LOAD COMPONENT
 ========================================= */
 
-if(navbar){
+function loadComponent(element, path) {
 
-    fetch(navbarPath)
+    if (!element) return;
 
-    .then(response => response.text())
+    fetch(path)
+        .then(res => res.text())
+        .then(data => {
 
-    .then(data => {
+            data = data.replaceAll("{{ROOT}}", ROOT);
 
-        navbar.innerHTML = data;
+            element.innerHTML = data;
 
-    });
+        })
+        .catch(err => {
+            console.log("Component load error:", err);
+        });
 
 }
 
 /* =========================================
-   LOAD FOOTER
+   LOAD COMPONENTS
 ========================================= */
 
-if(footer){
+loadComponent(popup, `${ROOT}components/popup.html`);
+loadComponent(navbar, `${ROOT}components/navbar.html`);
+loadComponent(footer, `${ROOT}components/footer.html`);
 
-    fetch(footerPath)
+/* =========================================
+   GLOBAL POPUP EVENTS
+========================================= */
 
-    .then(response => response.text())
+document.addEventListener("click", (e) => {
 
-    .then(data => {
+    const popupOverlay =
+        document.getElementById("popupOverlay");
 
-        footer.innerHTML = data;
+    if (!popupOverlay) return;
 
-    });
+    if (e.target.closest("#openPopupBtn")) {
+        popupOverlay.classList.add("active");
+    }
 
-}
+    if (e.target.closest("#popupClose")) {
+        popupOverlay.classList.remove("active");
+    }
+
+    if (e.target === popupOverlay) {
+        popupOverlay.classList.remove("active");
+    }
+
+});
