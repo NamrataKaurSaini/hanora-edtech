@@ -269,3 +269,95 @@
     }
 
 }
+
+/* =========================================
+   EXTRA RESPONSIVE FIXES
+========================================= */
+
+@media (max-width: 992px) {
+
+    .footer-container {
+        gap: 35px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer-container {
+        padding: 0 5%;
+        gap: 30px;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact-wrapper {
+        text-align: center;
+    }
+
+    .footer-brand a {
+        display: inline-block;
+    }
+
+    .footer-contact {
+        gap: 16px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-item i {
+        min-width: 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+    }
+
+    .footer-bottom {
+        padding: 18px 5%;
+        margin-top: 40px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .footer-logo {
+        width: 130px;
+    }
+
+    .footer-links h4,
+    .footer-contact-wrapper h4 {
+        font-size: 20px;
+    }
+
+    .footer-brand p,
+    .footer-links ul li a,
+    .contact-item span {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}

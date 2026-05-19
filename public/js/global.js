@@ -74,3 +74,24 @@ document.addEventListener("click", (e) => {
     }
 
 });
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+document.addEventListener("click", (e) => {
+
+    const menuBtn = e.target.closest("#menuToggle");
+    const navRight = document.querySelector(".nav-right");
+    const dropdown = e.target.closest(".dropdown-link");
+
+    if (menuBtn && navRight) {
+        navRight.classList.toggle("active");
+    }
+
+    if (dropdown && window.innerWidth <= 992) {
+        e.preventDefault();
+        dropdown.parentElement.classList.toggle("active");
+    }
+
+});

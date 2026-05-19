@@ -1,5 +1,4 @@
 <nav class="navbar">
-
     <div class="nav-container">
 
         <!-- LOGO -->
@@ -8,18 +7,13 @@
         </a>
 
         <!-- RIGHT SIDE -->
-        <div class="nav-right">
+        <div class="nav-right" id="navRight">
 
-            <!-- LINKS -->
             <ul class="nav-links">
 
-                <li>
-                    <a href="{{ROOT}}index.html">Home</a>
-                </li>
+                <li><a href="{{ROOT}}index.html">Home</a></li>
 
-                <li>
-                    <a href="{{ROOT}}about.html">About</a>
-                </li>
+                <li><a href="{{ROOT}}about.html">About</a></li>
 
                 <li class="dropdown">
 
@@ -29,56 +23,34 @@
                     </a>
 
                     <ul class="dropdown-menu">
-
-                        <li>
-                            <a href="{{ROOT}}courses/bba.html">
-                                BBA
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ROOT}}courses/bcom.html">
-                                B.Com
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ROOT}}courses/mba.html">
-                                MBA
-                            </a>
-                        </li>
-
+                        <li><a href="{{ROOT}}courses/bba.html">BBA</a></li>
+                        <li><a href="{{ROOT}}courses/bcom.html">B.Com</a></li>
+                        <li><a href="{{ROOT}}courses/mba.html">MBA</a></li>
                     </ul>
 
                 </li>
 
-                <li>
-                    <a href="{{ROOT}}contact.html">Contact</a>
-                </li>
+                <li><a href="{{ROOT}}contact.html">Contact</a></li>
 
             </ul>
 
-            <!-- BUTTONS -->
             <div class="nav-actions">
-
                 <button class="popup-nav-btn" id="openPopupBtn">
-
                     <i class="ri-customer-service-2-line"></i>
-
                     Enquire Now
-
                 </button>
 
                 <a href="{{ROOT}}contact.html" class="nav-btn">
-
                     Apply Now
-
                 </a>
-
             </div>
 
         </div>
 
-    </div>
+        <!-- MOBILE TOGGLE -->
+        <button class="menu-toggle" id="menuToggle">
+            <i class="ri-menu-line"></i>
+        </button>
 
+    </div>
 </nav>
