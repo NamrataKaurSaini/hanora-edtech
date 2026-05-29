@@ -501,79 +501,6 @@ h4 {
 }
 
 /* =========================================
-   TRUST STRIP
-========================================= */
-
-.trust-strip {
-    padding-top: 0;
-
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    flex-wrap: wrap;
-}
-
-.trust-item {
-    background: var(--white);
-    border: 1px solid var(--border);
-
-    padding: 26px 34px;
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    box-shadow: var(--shadow);
-
-    transition: all 0.35s ease;
-}
-
-.trust-item:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-hover);
-}
-
-.trust-item i {
-    color: var(--primary);
-    font-size: 28px;
-}
-
-.trust-item span {
-    font-weight: 600;
-}
-
-/* TRUST STRIP 2 ROW LAYOUT */
-
-.trust-scroll{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px 22px;
-}
-
-/* 3 cards per row */
-.trust-logo{
-    width: calc(33.33% - 15px);
-    max-width: 340px;
-    min-width: 260px;
-}
-
-/* Responsive */
-@media (max-width: 992px){
-    .trust-logo{
-        width: calc(50% - 15px);
-    }
-}
-
-@media (max-width: 576px){
-    .trust-logo{
-        width: 100%;
-    }
-}
-
-/* =========================================
    ABOUT SECTION
 ========================================= */
 
@@ -1723,6 +1650,197 @@ h4 {
 }
 
 /* =========================================
+   PREMIUM TRUST STRIP
+========================================= */
+
+.premium-trust-wrapper{
+    padding: 10px 6% 50px;
+    background: #f7f7f7;
+}
+
+/* subtle glow */
+.premium-trust-strip{
+
+    background:
+        linear-gradient(
+            135deg,
+            #20232c 0%,
+            #2b3140 100%
+        );
+
+    border-radius: 36px;
+
+    padding: 26px 34px;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.10);
+}
+
+/* =========================================
+   FLEX ROW
+========================================= */
+
+.trust-scroll{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+    position:relative;
+    z-index:2;
+}
+
+/* =========================================
+   TRUST ITEM
+========================================= */
+
+.trust-logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    padding:12px 16px;
+
+    border-radius:18px;
+
+    transition:all 0.35s ease;
+
+    background:
+        rgba(255,255,255,0.02);
+
+    border:
+        1px solid rgba(255,255,255,0.04);
+
+    /* NEW */
+    width: calc(33.33% - 16px);
+    max-width: 340px;
+    min-width: 260px;
+}
+
+.trust-logo:hover{
+
+    background:
+        rgba(255,255,255,0.06);
+
+    transform:translateY(-3px);
+}
+
+.trust-logo i{
+
+    width:40px;
+    height:40px;
+
+    border-radius:14px;
+
+    background:
+        rgba(255,107,0,0.14);
+
+    color:#ff6b00;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+
+    flex-shrink:0;
+}
+
+.trust-logo span{
+
+    font-size:15px;
+    font-weight:600;
+
+    line-height:1.4;
+
+    color:#ffffff;
+
+    white-space:nowrap;
+}
+
+/* divider */
+
+.trust-divider{
+
+    width:1px;
+    height:42px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    flex-shrink:0;
+
+    display:none;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+    .trust-scroll{
+
+        justify-content:center;
+
+        row-gap:20px;
+    }
+
+    .trust-logo{
+        width: calc(50% - 16px);
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .premium-trust-wrapper{
+        padding:0 5% 40px;
+    }
+
+    .premium-trust-strip{
+
+        padding:24px;
+
+        border-radius:28px;
+    }
+
+    .trust-scroll{
+
+        gap:14px;
+    }
+
+    .trust-logo{
+
+        width:100%;
+        max-width:100%;
+        min-width:100%;
+    }
+
+    .trust-logo span{
+        font-size:15px;
+    }
+
+}
+
+/* =========================================
    HERO BRAND STRIP
 ========================================= */
 
@@ -2091,6 +2209,8 @@ h4 {
 }
 
 .authorized-mini-box h4 {
+    white-space: nowrap;
+
     font-size: 28px;
 
     color: #ff6b00;
@@ -2140,180 +2260,6 @@ h4 {
 
     .authorized-mini-grid {
         grid-template-columns: 1fr;
-    }
-
-}
-
-/* =========================================
-   PREMIUM TRUST STRIP
-========================================= */
-
-.premium-trust-wrapper{
-    padding: 10px 6% 50px;
-    background: #f7f7f7;
-}
-
-/* subtle glow */
-.premium-trust-strip{
-
-    background:
-        linear-gradient(
-            135deg,
-            #20232c 0%,
-            #2b3140 100%
-        );
-
-    border-radius: 36px;
-
-    padding: 26px 34px;
-
-    position: relative;
-    overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,0.06);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.10);
-}
-
-/* =========================================
-   FLEX ROW
-========================================= */
-
-.trust-scroll{
-
-    display:grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap:22px;
-
-    justify-items:center;
-
-    position:relative;
-    z-index:2;
-}
-
-/* =========================================
-   TRUST ITEM
-========================================= */
-
-.trust-logo{
-
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-
-    color:white;
-
-    padding:12px 16px;
-
-    border-radius:18px;
-
-    transition:all 0.35s ease;
-
-    background:
-        rgba(255,255,255,0.02);
-
-    border:
-        1px solid rgba(255,255,255,0.04);
-
-    width:100%;
-    max-width:340px;
-}
-
-.trust-logo:hover{
-
-    background:
-        rgba(255,255,255,0.06);
-
-    transform:translateY(-3px);
-}
-
-.trust-logo i{
-
-    width:40px;
-    height:40px;
-
-    border-radius:14px;
-
-    background:
-        rgba(255,107,0,0.14);
-
-    color:#ff6b00;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:18px;
-
-    flex-shrink:0;
-}
-
-.trust-logo span{
-
-    font-size:15px;
-    font-weight:600;
-
-    line-height:1.4;
-
-    color:#ffffff;
-
-    white-space:nowrap;
-}
-
-/* divider */
-
-.trust-divider{
-    display:none;
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:1200px){
-
-    .trust-scroll{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-    .premium-trust-wrapper{
-        padding:0 5% 40px;
-    }
-
-    .premium-trust-strip{
-
-        padding:24px;
-
-        border-radius:28px;
-    }
-
-    .trust-scroll{
-
-        grid-template-columns: 1fr;
-
-        gap:14px;
-    }
-
-    .trust-logo{
-
-        width:100%;
-        max-width:100%;
-    }
-
-    .trust-logo span{
-        font-size:15px;
     }
 
 }
@@ -2511,6 +2457,8 @@ h4 {
     border-radius: 16px;
 
     padding: 16px 18px;
+
+    margin:5px;
 }
 
 .detail-item span {
