@@ -544,6 +544,35 @@ h4 {
     font-weight: 600;
 }
 
+/* TRUST STRIP 2 ROW LAYOUT */
+
+.trust-scroll{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 22px;
+}
+
+/* 3 cards per row */
+.trust-logo{
+    width: calc(33.33% - 15px);
+    max-width: 340px;
+    min-width: 260px;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+    .trust-logo{
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 576px){
+    .trust-logo{
+        width: 100%;
+    }
+}
+
 /* =========================================
    ABOUT SECTION
 ========================================= */
@@ -2124,8 +2153,6 @@ h4 {
     background: #f7f7f7;
 }
 
-
-
 /* subtle glow */
 .premium-trust-strip{
 
@@ -2155,13 +2182,13 @@ h4 {
 
 .trust-scroll{
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display:grid;
+
+    grid-template-columns: repeat(3, 1fr);
 
     gap:22px;
 
-    flex-wrap:wrap;
+    justify-items:center;
 
     position:relative;
     z-index:2;
@@ -2191,6 +2218,9 @@ h4 {
 
     border:
         1px solid rgba(255,255,255,0.04);
+
+    width:100%;
+    max-width:340px;
 }
 
 .trust-logo:hover{
@@ -2237,14 +2267,7 @@ h4 {
 /* divider */
 
 .trust-divider{
-
-    width:1px;
-    height:42px;
-
-    background:
-        rgba(255,255,255,0.10);
-
-    flex-shrink:0;
+    display:none;
 }
 
 /* =========================================
@@ -2254,16 +2277,7 @@ h4 {
 @media(max-width:1200px){
 
     .trust-scroll{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        row-gap:20px;
-    }
-
-    .trust-divider{
-        display:none;
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -2287,9 +2301,7 @@ h4 {
 
     .trust-scroll{
 
-        flex-direction:column;
-
-        align-items:flex-start;
+        grid-template-columns: 1fr;
 
         gap:14px;
     }
@@ -2297,6 +2309,7 @@ h4 {
     .trust-logo{
 
         width:100%;
+        max-width:100%;
     }
 
     .trust-logo span{
@@ -2855,54 +2868,140 @@ h4 {
 
 .hiring-section{
     margin-top:80px;
-
     text-align:center;
 }
 
 .hiring-section h3{
     font-size:34px;
-
     margin-bottom:40px;
-
     color:#2f3138;
 }
 
+/* =========================================
+   COMPANY GRID
+========================================= */
+
 .company-grid{
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:repeat(5, 1fr);
 
     gap:24px;
 }
 
-.company-box{
-    background:white;
+/* =========================================
+   COMPANY CARD
+========================================= */
 
-    border:1px solid #ececec;
+/* Default Logo */
+/* =========================================
+   LOGO IMAGE
+========================================= */
+
+/* =========================================
+   COMPANY CARD
+========================================= */
+
+.company-box{
+
+    background:#2f3138;
+
+    border:1px solid rgba(255,255,255,0.08);
 
     border-radius:22px;
 
-    padding:28px 20px;
+    height:170px;
 
-    font-size:20px;
-    font-weight:700;
+    padding:24px;
 
-    color:#2f3138;
+    margin-top:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
 
     transition:all 0.35s ease;
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.04);
+        0 10px 25px rgba(0,0,0,0.08);
 }
 
 .company-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(255,107,0,0.30);
+
+    box-shadow:
+        0 20px 45px rgba(255,107,0,0.14);
+}
+
+/* =========================================
+   LOGO IMAGE
+========================================= */
+
+.company-box img{
+
+    max-width:85%;
+    max-height:85%;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+
+/* Smaller logos */
+
+.logo-small{
+    width:80% !important;
+    height:80% !important;
+    margin:auto;
+}
+
+/* Wide logos like HDFC */
+
+.logo-wide{
+    width:90% !important;
+    height:auto !important;
+}
+
+/* Larger logos */
+
+.logo-large{
+
+    max-width:100% !important;
+    max-height:100% !important;
+}
+
+.company-box:hover{
+
     transform:translateY(-8px);
 
     border-color:rgba(255,107,0,0.16);
 
     box-shadow:
         0 20px 45px rgba(255,107,0,0.10);
+}
 
-    color:#ff6b00;
+/* =========================================
+   LOGO IMAGE
+========================================= */
+
+.company-box img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
 }
 
 /* =========================================
@@ -2937,6 +3036,10 @@ h4 {
 
     .company-grid{
         grid-template-columns:1fr;
+    }
+
+    .company-box{
+        height:150px;
     }
 
 }
