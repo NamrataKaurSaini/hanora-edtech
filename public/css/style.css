@@ -2165,7 +2165,7 @@ h4 {
 
 .authorized-feature {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 14px;
 
     background: white;
@@ -3612,7 +3612,7 @@ h4 {
     border-bottom:none;
 }
 
-.comparison-row:not(.comparison-header):hover{
+.comparison-row:hover{
 
     background:
         rgba(255,107,0,0.03);
@@ -3637,7 +3637,6 @@ h4 {
 
     color:white;
 }
-
 
 /* CELLS */
 
