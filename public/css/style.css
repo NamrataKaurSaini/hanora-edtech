@@ -172,8 +172,8 @@ h4 {
 ========================================= */
 
 .home-hero {
-    min-height: 100vh;
-    padding-top: 150px;
+    min-height: calc(100vh - 90px);
+    padding-top: 130px;
 
     display: flex;
     align-items: center;
@@ -274,9 +274,15 @@ h4 {
 .hero-stats {
     display: flex;
     gap: 24px;
+    margin-top: 60px;
 
-    margin-top: 70px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 0;
 }
 
 .stat-box {
@@ -316,8 +322,12 @@ h4 {
 
 .hero-right {
     flex: 1;
-    min-height: 700px;
+    min-height: 620px;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .hero-bg-circle {
@@ -332,8 +342,8 @@ h4 {
     border-radius: 50%;
 
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 10px;
+    right: 30px;
 }
 
 .main-hero-card {
@@ -348,7 +358,7 @@ h4 {
     padding: 52px;
 
     position: absolute;
-    top: 150px;
+    top: 50px;
     left: 50%;
 
     transform: translateX(-50%);
@@ -453,12 +463,87 @@ h4 {
 
 .floating-1 {
     top: 100px;
-    left: 20px;
+    left: -10px;
 }
 
 .floating-2 {
-    bottom: 120px;
-    right: 30px;
+    bottom: 110px;
+    right: -10px;
+}
+
+
+@media (max-width: 992px) {
+
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 70px;
+    }
+
+    .hero-left h1 {
+        font-size: 52px;
+    }
+
+    .hero-left p {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-right {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .main-hero-card {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    .floating-element {
+        display: none;
+    }
+
+    .hero-bg-circle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .brochure-btn {
+        min-width: 100%;
+    }
 }
 
 /* =========================================
@@ -3823,6 +3908,7 @@ h4 {
     padding:20px 6% 40px;
 
     background:#f7f7f7;
+    margin-bottom: 80px;
 }
 
 .admission-strip-content{
