@@ -1,167 +1,181 @@
-    <!-- =========================================
+<!-- =========================================
      POPUP FORM
 ========================================= -->
 
-    <div class="popup-overlay" id="popupOverlay">
+<div class="popup-overlay" id="popupOverlay">
 
-        <div class="popup-box">
+    <div class="popup-box">
 
-            <!-- CLOSE BUTTON -->
+        <!-- CLOSE BUTTON -->
 
-            <button class="popup-close" id="popupClose">
+        <button class="popup-close" id="popupClose">
+            <i class="ri-close-line"></i>
+        </button>
 
-                <i class="ri-close-line"></i>
+        <!-- LEFT -->
 
-            </button>
+        <div class="popup-left">
 
-            <!-- LEFT -->
+            <span class="popup-label">
+                ADMISSION OPEN
+            </span>
 
-            <div class="popup-left">
+            <h2>
+                Start Your Professional Journey Today
+            </h2>
 
-                <span class="popup-label">
-                    ADMISSION OPEN
-                </span>
+            <p>
+                Explore career-focused programs in Business, Commerce and Management with modern professional learning.
+            </p>
 
-                <h2>
-                    Start Your Professional Journey Today
-                </h2>
+            <div class="popup-features">
 
-                <p>
-                    Explore career-focused programs in Business, Commerce and Management with modern professional
-                    learning.
-                </p>
-
-                <div class="popup-features">
-
-                    <div class="popup-feature">
-
-                        <i class="ri-check-line"></i>
-
-                        <span>
-                            Professional Programs
-                        </span>
-
-                    </div>
-
-                    <div class="popup-feature">
-
-                        <i class="ri-check-line"></i>
-
-                        <span>
-                            Career Guidance
-                        </span>
-
-                    </div>
-
-                    <div class="popup-feature">
-
-                        <i class="ri-check-line"></i>
-
-                        <span>
-                            Industry Focused Learning
-                        </span>
-
-                    </div>
-
+                <div class="popup-feature">
+                    <i class="ri-check-line"></i>
+                    <span>Professional Programs</span>
                 </div>
 
-            </div>
+                <div class="popup-feature">
+                    <i class="ri-check-line"></i>
+                    <span>Career Guidance</span>
+                </div>
 
-            <!-- RIGHT -->
-
-            <div class="popup-right">
-
-                <h3>
-                    Quick Inquiry
-                </h3>
-                <form>
-
-                    <div class="popup-input">
-
-                        <input type="text" placeholder="Full Name" required>
-
-                    </div>
-
-                    <div class="popup-input">
-
-                        <input type="email" placeholder="Email Address" required>
-
-                    </div>
-
-                    <div class="popup-input">
-
-                        <input type="tel" placeholder="Phone Number" required>
-
-                    </div>
-
-                    <div class="popup-input">
-
-                        <input type="text" placeholder="Work Experience" required>
-
-                    </div>
-
-                    <div class="popup-input">
-
-                        <select required>
-
-                            <option value="">
-                                Preferred Specialization
-                            </option>
-
-                            <option>
-                                Online BBA
-                            </option>
-
-                            <option>
-                                Online B.Com
-                            </option>
-
-                            <option>
-                                MBA Specialization
-                            </option>
-
-                            <option>
-                                Marketing Management
-                            </option>
-
-                            <option>
-                                Financial Management
-                            </option>
-
-                            <option>
-                                HR Management
-                            </option>
-
-                            <option>
-                                Business Management
-                            </option>
-
-                            <option>
-                                Operations & Data Science
-                            </option>
-
-                            <option>
-                                Business Analytics
-                            </option>
-
-                            <option>
-                                IT Management
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                    <button type="submit" class="popup-btn">
-
-                        Book Free NMIMS Counselling
-
-                    </button>
-
-                </form>
+                <div class="popup-feature">
+                    <i class="ri-check-line"></i>
+                    <span>Industry Focused Learning</span>
+                </div>
 
             </div>
 
         </div>
 
+        <!-- RIGHT -->
+
+        <div class="popup-right">
+
+            <h3>
+                Quick Inquiry
+            </h3>
+
+            <form id="popupForm">
+
+                <!-- Full Name -->
+
+                <div class="popup-input">
+                    <input
+                        type="text"
+                        id="popupName"
+                        name="name"
+                        placeholder="Full Name"
+                        required>
+                </div>
+
+                <!-- Email -->
+
+                <div class="popup-input">
+                    <input
+                        type="email"
+                        id="popupEmail"
+                        name="email"
+                        placeholder="Email Address"
+                        required>
+                </div>
+
+                <!-- Phone -->
+
+                <div class="popup-input">
+                    <input
+                        type="tel"
+                        id="popupPhone"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required>
+                </div>
+
+                <!-- Experience -->
+
+                <div class="popup-input">
+                    <input
+                        type="text"
+                        id="popupExperience"
+                        name="experience"
+                        placeholder="Work Experience"
+                        required>
+                </div>
+
+                <!-- Course -->
+
+                <div class="popup-input">
+
+                    <select
+                        id="popupCourse"
+                        name="course"
+                        required>
+
+                        <option value="">
+                            Preferred Specialization
+                        </option>
+
+                        <option value="Online BBA">
+                            Online BBA
+                        </option>
+
+                        <option value="Online B.Com">
+                            Online B.Com
+                        </option>
+
+                        <option value="MBA Specialization">
+                            MBA Specialization
+                        </option>
+
+                        <option value="Marketing Management">
+                            Marketing Management
+                        </option>
+
+                        <option value="Financial Management">
+                            Financial Management
+                        </option>
+
+                        <option value="HR Management">
+                            HR Management
+                        </option>
+
+                        <option value="Business Management">
+                            Business Management
+                        </option>
+
+                        <option value="Operations & Data Science">
+                            Operations & Data Science
+                        </option>
+
+                        <option value="Business Analytics">
+                            Business Analytics
+                        </option>
+
+                        <option value="IT Management">
+                            IT Management
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit" class="popup-btn">
+                    Book Free NMIMS Counselling
+                </button>
+
+            </form>
+
+            <!-- Success Message -->
+
+            <div
+                id="popupSuccess"
+                style="display:none; margin-top:15px; color:green; font-weight:600;">
+                Inquiry submitted successfully!
+            </div>
+
+        </div>
+
     </div>
+
+</div>
