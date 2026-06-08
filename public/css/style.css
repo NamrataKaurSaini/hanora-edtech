@@ -4818,3 +4818,50 @@ h4 {
     }
 
 }
+
+.form-status-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.form-status-modal.active{
+    display:flex;
+}
+
+.form-status-content{
+    width:420px;
+    max-width:90%;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.status-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+#statusTitle{
+    margin-bottom:10px;
+}
+
+#statusMessage{
+    margin-bottom:20px;
+    color:#666;
+}
+
+#statusCloseBtn{
+    background:#ff6b00;
+    color:#fff;
+    border:none;
+    padding:12px 28px;
+    border-radius:10px;
+    cursor:pointer;
+}
