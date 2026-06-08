@@ -1,71 +1,203 @@
+
 <nav class="navbar">
+
     <div class="nav-container">
 
         <!-- LOGO -->
-        <!-- <a href="{{ROOT}}index.html" class="logo">
-            <img src="{{ROOT}}assets/logo.png" alt="Logo">
-        </a> -->
 
         <a href="{{ROOT}}index.html" class="logo">
-            <img src="{{ROOT}}assets/hanora-logo.png" alt="Hanora">
+
+            <img
+                src="{{ROOT}}assets/hanora-logo.png"
+                alt="Hanora EdTech">
 
             <h2>
                 Hanora <span>EdTech</span>
             </h2>
+
         </a>
 
         <!-- RIGHT SIDE -->
+
         <div class="nav-right" id="navRight">
 
             <ul class="nav-links">
 
-                <li><a href="{{ROOT}}index.html">Home</a></li>
-
-                <li><a href="{{ROOT}}about.html">About</a></li>
-
-                <!-- COURSES DROPDOWN -->
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                        Courses
-                        <i class="ri-arrow-down-s-line"></i>
+                <li>
+                    <a href="{{ROOT}}index.html">
+                        Home
                     </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ROOT}}courses/bba.html">BBA</a></li>
-                        <li><a href="{{ROOT}}courses/bcom.html">B.Com</a></li>
-                        <li><a href="{{ROOT}}courses/mba.html">MBA</a></li>
-                        <li><a href="{{ROOT}}courses/marketing-management.html">Marketing Management</a></li>
-                        <li><a href="{{ROOT}}courses/financial-management.html">Financial Management</a></li>
-                        <li><a href="{{ROOT}}courses/HR-management.html">HR Management</a></li>
-                        <li><a href="{{ROOT}}courses/business-management.html">Business Management</a></li>
-                        <li><a href="{{ROOT}}courses/operation&data-science.html">Operations & Data Science</a></li>
-                        <li><a href="{{ROOT}}courses/business-analytics.html">Business Analytics</a></li>
-                        <li><a href="{{ROOT}}courses/IT-management.html">IT Management</a></li>
-
-                    </ul>
                 </li>
 
-                <li><a href="{{ROOT}}contact.html">Contact</a></li>
+                <li>
+                    <a href="{{ROOT}}about.html">
+                        About
+                    </a>
+                </li>
+
+                <!-- COURSES DROPDOWN -->
+
+                <li class="dropdown">
+
+                    <button
+                        class="dropdown-link"
+                        type="button"
+                        aria-expanded="false"
+                        aria-haspopup="true">
+
+                        <span>Courses</span>
+
+                        <i class="ri-arrow-down-s-line"></i>
+
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <!-- COLUMN 1 -->
+
+                        <div class="dropdown-column">
+
+                            <div class="dropdown-heading">
+                                Degree Programs
+                            </div>
+
+                            <a href="{{ROOT}}courses/bba.html">
+                                BBA
+                            </a>
+
+                            <a href="{{ROOT}}courses/bcom.html">
+                                B.Com
+                            </a>
+
+                            <div class="dropdown-heading">
+                                MBA Programs
+                            </div>
+
+                            <a href="{{ROOT}}courses/mba.html">
+                                MBA
+                            </a>
+
+                            <a href="{{ROOT}}courses/executive-mba.html">
+                                Executive MBA
+                            </a>
+
+                            <a href="{{ROOT}}courses/mba-wx.html">
+                                MBA (WX)
+                            </a>
+
+                            <a href="{{ROOT}}courses/marketing-management.html">
+                                MBA Marketing Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/financial-management.html">
+                                MBA Financial Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/HR-management.html">
+                                MBA HR Management
+                            </a>
+
+                        </div>
+
+                        <!-- COLUMN 2 -->
+
+                        <div class="dropdown-column">
+
+                            <div class="dropdown-heading">
+                                MBA Specializations
+                            </div>
+
+                            <a href="{{ROOT}}courses/business-management.html">
+                                MBA Business Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/operation&data-science.html">
+                                MBA Operations & Data Science
+                            </a>
+
+                            <a href="{{ROOT}}courses/business-analytics.html">
+                                MBA Business Analytics
+                            </a>
+
+                            <a href="{{ROOT}}courses/IT-management.html">
+                                MBA IT Management
+                            </a>
+
+                            <div class="dropdown-heading">
+                                Diploma Programs
+                            </div>
+
+                            <a href="{{ROOT}}courses/diploma-business-management.html">
+                                Diploma in Business Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/diploma-marketing-management.html">
+                                Diploma in Marketing Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/diploma-human-resource-management.html">
+                                Diploma in Human Resource Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/diploma-financial-management.html">
+                                Diploma in Financial Management
+                            </a>
+
+                            <a href="{{ROOT}}courses/diploma-operations-management.html">
+                                Diploma in Operations Management
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="{{ROOT}}contact.html">
+                        Contact
+                    </a>
+                </li>
 
             </ul>
 
+            <!-- ACTION BUTTONS -->
+
             <div class="nav-actions">
-                <button class="popup-nav-btn" id="openPopupBtn">
+
+                <button
+                    class="popup-nav-btn"
+                    id="openPopupBtn">
+
                     <i class="ri-customer-service-2-line"></i>
+
                     Enquire Now
+
                 </button>
 
-                <a href="{{ROOT}}contact.html" class="nav-btn">
+                <a
+                    href="{{ROOT}}contact.html"
+                    class="nav-btn">
+
                     Apply Now
+
                 </a>
+
             </div>
 
         </div>
 
-        <!-- MOBILE TOGGLE -->
-        <button class="menu-toggle" id="menuToggle">
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu">
+
             <i class="ri-menu-line"></i>
+
         </button>
 
     </div>
+
 </nav>
