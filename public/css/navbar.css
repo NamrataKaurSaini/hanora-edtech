@@ -6,7 +6,7 @@
 
     width: 100%;
 
-    min-height: 88px;
+    min-height: 80px;
 
     position: fixed;
 
@@ -29,7 +29,7 @@
 
     width: 100%;
 
-    padding: 18px 6%;
+    padding: 14px 6%;
 
     display: flex;
 
@@ -53,7 +53,7 @@
 
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
     text-decoration: none;
 
@@ -63,7 +63,7 @@
 
 .logo img {
 
-    height: 70px;
+    height: 50px;
 
     width: auto;
 
@@ -77,7 +77,7 @@
 
     margin: 0;
 
-    font-size: 38px;
+    font-size: 28px;
 
     font-weight: 700;
 
@@ -467,11 +467,11 @@
     }
 
     .logo img {
-        height: 52px;
+        height: 38px;
     }
 
     .logo h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 }
@@ -485,11 +485,11 @@
     }
 
     .logo img {
-        height: 44px;
+        height: 32px;
     }
 
     .logo h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
 }
