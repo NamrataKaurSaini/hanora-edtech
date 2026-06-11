@@ -1,8 +1,20 @@
 console.log("email.js loaded");
 
-emailjs.init("20-ABcVUgqa4V5_NL");
+emailjs.init("7IkDYH_-MbgnLD3kG");
+
+/* =========================================
+   STATUS MODAL
+========================================= */
 
 function showStatus(title, message) {
+
+    const modal =
+        document.getElementById("formStatusModal");
+
+    if (!modal) {
+        alert(message);
+        return;
+    }
 
     document.getElementById("statusTitle").innerText =
         title;
@@ -10,15 +22,18 @@ function showStatus(title, message) {
     document.getElementById("statusMessage").innerText =
         message;
 
-    document.getElementById("formStatusModal")
-        .classList.add("active");
+    modal.classList.add("active");
 }
 
 function hideStatus() {
 
-    document
-        .getElementById("formStatusModal")
-        ?.classList.remove("active");
+    const modal =
+        document.getElementById("formStatusModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+    }
+
 }
 
 document.addEventListener("click", function (e) {
@@ -32,82 +47,105 @@ document.addEventListener("click", function (e) {
 
 });
 
-document.addEventListener("submit", function (e) {
+/* =========================================
+   FORM SUBMIT HANDLER
+========================================= */
 
-    e.preventDefault();
+document.addEventListener("submit", function (e) {
 
     const form = e.target;
 
-    // =====================================
-    // POPUP FORM
-    // =====================================
+    /* =====================================
+       POPUP FORM
+    ===================================== */
 
     if (form.closest(".popup-right")) {
 
-        const inputs = form.querySelectorAll("input");
-        const select = form.querySelector("select");
+        e.preventDefault();
+
+        const inputs =
+            form.querySelectorAll("input");
+
+        const select =
+            form.querySelector("select");
 
         const templateParams = {
-            name: inputs[0]?.value || "",
-            email: inputs[1]?.value || "",
-            phone: inputs[2]?.value || "",
-            experience: inputs[3]?.value || "",
-            course: select?.value || "",
-            source: "Popup Form",
-            message: "New admission enquiry received."
+
+            name:
+                inputs[0]?.value || "",
+
+            email:
+                inputs[1]?.value || "",
+
+            phone:
+                inputs[2]?.value || "",
+
+            experience:
+                inputs[3]?.value || "",
+
+            course:
+                select?.value || "",
+
+            source:
+                "Popup Form",
+
+            message:
+                "New admission enquiry received."
+
         };
 
         console.log("Popup Data:", templateParams);
 
         showStatus(
             "Sending Enquiry",
-            "Please wait while we submit your request.",
-            "⏳"
+            "Please wait while we submit your request."
         );
 
         emailjs.send(
-            "service_c8m4gsv",
-            "template_jtvb9q1",
+            "service_nxpwhh9",
+            "template_sawhvi8",
             templateParams
         )
-            .then(function () {
+        .then(function (response) {
 
-                showStatus(
-                    "Enquiry Submitted",
-                    "Thank you. Our admissions team will contact you shortly.",
-                    
-                );
+            console.log("SUCCESS:", response);
 
-                form.reset();
+            showStatus(
+                "Enquiry Submitted",
+                "Thank you. Our admissions team will contact you shortly."
+            );
 
-                const popupOverlay =
-                    document.getElementById("popupOverlay");
+            form.reset();
 
-                if (popupOverlay) {
-                    popupOverlay.classList.remove("active");
-                }
+            const popupOverlay =
+                document.getElementById("popupOverlay");
 
-            })
-            .catch(function (error) {
+            if (popupOverlay) {
+                popupOverlay.classList.remove("active");
+            }
 
-                console.error("EMAILJS ERROR:", error);
+        })
+        .catch(function (error) {
 
-                showStatus(
-                    "Submission Failed",
-                    "Something went wrong. Please try again.",
-                    
-                );
+            console.error("EMAILJS ERROR:", error);
 
-            });
+            showStatus(
+                "Submission Failed",
+                "Something went wrong. Please try again."
+            );
+
+        });
 
         return;
     }
 
-    // =====================================
-    // CONTACT FORM
-    // =====================================
+    /* =====================================
+       CONTACT PAGE FORM
+    ===================================== */
 
     if (form.id === "contactForm") {
+
+        e.preventDefault();
 
         const templateParams = {
 
@@ -137,38 +175,37 @@ document.addEventListener("submit", function (e) {
         console.log("Contact Data:", templateParams);
 
         showStatus(
-            "Sending Enquiry",
-            "Please wait while we submit your request.",
-            
+            "Sending Message",
+            "Please wait while we submit your request."
         );
 
         emailjs.send(
-            "service_c8m4gsv",
-            "template_jtvb9q1",
+            "service_nxpwhh9",
+            "template_sawhvi8",
             templateParams
         )
-            .then(function () {
+        .then(function (response) {
 
-                showStatus(
-                    "Message Sent",
-                    "Thank you. Our team will get back to you soon.",
-                    
-                );
+            console.log("SUCCESS:", response);
 
-                form.reset();
+            showStatus(
+                "Message Sent",
+                "Thank you. Our team will get back to you soon."
+            );
 
-            })
-            .catch(function (error) {
+            form.reset();
 
-                console.error("EMAILJS ERROR:", error);
+        })
+        .catch(function (error) {
 
-                showStatus(
-                    "Submission Failed",
-                    "Something went wrong. Please try again.",
-                    
-                );
+            console.error("EMAILJS ERROR:", error);
 
-            });
+            showStatus(
+                "Submission Failed",
+                "Something went wrong. Please try again."
+            );
+
+        });
 
     }
 
