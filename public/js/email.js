@@ -3,51 +3,6 @@ console.log("email.js loaded");
 emailjs.init("7IkDYH_-MbgnLD3kG");
 
 /* =========================================
-   STATUS MODAL
-========================================= */
-
-function showStatus(title, message) {
-
-    const modal =
-        document.getElementById("formStatusModal");
-
-    if (!modal) {
-        alert(message);
-        return;
-    }
-
-    document.getElementById("statusTitle").innerText =
-        title;
-
-    document.getElementById("statusMessage").innerText =
-        message;
-
-    modal.classList.add("active");
-}
-
-function hideStatus() {
-
-    const modal =
-        document.getElementById("formStatusModal");
-
-    if (modal) {
-        modal.classList.remove("active");
-    }
-
-}
-
-document.addEventListener("click", function (e) {
-
-    if (
-        e.target.id === "statusCloseBtn" ||
-        e.target.id === "formStatusModal"
-    ) {
-        hideStatus();
-    }
-
-});
-
-/* =========================================
    FORM SUBMIT HANDLER
 ========================================= */
 
@@ -96,11 +51,6 @@ document.addEventListener("submit", function (e) {
 
         console.log("Popup Data:", templateParams);
 
-        showStatus(
-            "Sending Enquiry",
-            "Please wait while we submit your request."
-        );
-
         emailjs.send(
             "service_nxpwhh9",
             "template_sawhvi8",
@@ -109,11 +59,6 @@ document.addEventListener("submit", function (e) {
         .then(function (response) {
 
             console.log("SUCCESS:", response);
-
-            showStatus(
-                "Enquiry Submitted",
-                "Thank you. Our admissions team will contact you shortly."
-            );
 
             form.reset();
 
@@ -129,18 +74,13 @@ document.addEventListener("submit", function (e) {
 
             console.error("EMAILJS ERROR:", error);
 
-            showStatus(
-                "Submission Failed",
-                "Something went wrong. Please try again."
-            );
-
         });
 
         return;
     }
 
     /* =====================================
-       CONTACT PAGE FORM
+       CONTACT FORM
     ===================================== */
 
     if (form.id === "contactForm") {
@@ -174,11 +114,6 @@ document.addEventListener("submit", function (e) {
 
         console.log("Contact Data:", templateParams);
 
-        showStatus(
-            "Sending Message",
-            "Please wait while we submit your request."
-        );
-
         emailjs.send(
             "service_nxpwhh9",
             "template_sawhvi8",
@@ -188,22 +123,12 @@ document.addEventListener("submit", function (e) {
 
             console.log("SUCCESS:", response);
 
-            showStatus(
-                "Message Sent",
-                "Thank you. Our team will get back to you soon."
-            );
-
             form.reset();
 
         })
         .catch(function (error) {
 
             console.error("EMAILJS ERROR:", error);
-
-            showStatus(
-                "Submission Failed",
-                "Something went wrong. Please try again."
-            );
 
         });
 
