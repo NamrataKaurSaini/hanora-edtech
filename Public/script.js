@@ -2,9 +2,9 @@
    EMAILJS CONFIGURATION
 ========================================================= */
 
-const EMAILJS_PUBLIC_KEY = "7IkDYH_-MbgnLD3kG";
-const EMAILJS_SERVICE_ID = "service_nxpwhh9";
-const EMAILJS_TEMPLATE_ID = "template_r9z8srf";
+const EMAILJS_PUBLIC_KEY = "FfxgPNO9NxwTz--M_";
+const EMAILJS_SERVICE_ID = "service_ph66ynj";
+const EMAILJS_TEMPLATE_ID = "template_axlq488";
 
 
 /* =========================================================

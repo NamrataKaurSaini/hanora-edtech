@@ -222,7 +222,7 @@
                         <!-- CONSENT -->
                         <label class="admission-consent">
 
-                            <input type="checkbox" required>
+                            <input type="checkbox" name="consent" required>
 
                             <span>
                                 I am interested in receiving admission/course
@@ -1380,8 +1380,11 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Website JavaScript -->
+<script src="script.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
