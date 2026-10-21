@@ -1,6 +1,6 @@
 console.log("email.js loaded");
 
-emailjs.init("7IkDYH_-MbgnLD3kG");
+emailjs.init("5NOfMAZ905N6EFXvB");
 
 /* ==========================================================
    STATUS MODAL
@@ -155,8 +155,8 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
     }
 
     emailjs.send(
-        "service_nxpwhh9",
-        "template_sawhvi8",
+        "service_vsqrdn9",
+        "template_3razfyv",
         templateParams
     )
 
