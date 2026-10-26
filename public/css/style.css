@@ -5206,3 +5206,78 @@ html{
         width:100%;
     }
 }
+
+
+/* =========================================
+   PROGRAM EXPLORER - WIDTH FIX
+========================================= */
+
+.program-explorer {
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.program-layout {
+    width: 100%;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 30px;
+}
+
+.program-content-wrapper,
+.program-panel {
+    min-width: 0;
+    width: 100%;
+}
+
+.program-panel.active {
+    display: block;
+}
+
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.program-card {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+.program-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .program-layout {
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .program-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .program-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .program-sidebar {
+        width: 100%;
+    }
+}
+
